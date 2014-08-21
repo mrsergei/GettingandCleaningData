@@ -1,4 +1,4 @@
-Getting and Cleaning Data
-=========================
+Wearable Computing Data Analysis
+================================
 
 Getting and Cleaning Data course project for Johns Hopkins University Data Science specialization on Coursera
