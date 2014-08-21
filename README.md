@@ -1,4 +1,4 @@
 GettingandCleaningData
 ======================
 
-Course Project for Getting and Cleaning Data course for Johns Hopkins University Data Science on Coursera
+Getting and Cleaning Data course project for Johns Hopkins University Data Science specialization on Coursera
