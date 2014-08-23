@@ -24,7 +24,7 @@ featureLabel  <- read.table(featNameFile, col.names = c("ID", "Name"), stringsAs
 activityLabel <- read.table(activityNameFile, col.names = c("ID", "Name"), stringsAsFactors = FALSE)
 
 ## load and merge test and train data sets for features measurements, subjects and activities
-subject  <- do.call("rbind", lapply(subjectFiles, read.table, col.names = c("SubjectID")))
+subject <- do.call("rbind", lapply(subjectFiles, read.table, col.names = c("SubjectID")))
 
 ## load and merge test and train data sets for activities
 activity <- do.call("rbind", lapply(activityFiles, read.table))
