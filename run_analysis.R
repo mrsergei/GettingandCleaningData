@@ -1,4 +1,6 @@
 ##
+##  Coursera - Johns Hopkins University "Getting and Cleaning Data" course projet
+##
 ## (c) Sergei V Rousakov
 
 ## ensure reshape2 is installed and loaded 
@@ -25,24 +27,27 @@ activityLabel <- read.table(activityNameFile, col.names = c("ID", "Name"), strin
 subject  <- do.call("rbind", lapply(subjectFiles, read.table, col.names = c("SubjectID")))
 
 ## load and merge test and train data sets for activities
-activity <- do.call("rbind", lapply(activityFiles, read.table, col.names = c("ActivityID")))
+activity <- do.call("rbind", lapply(activityFiles, read.table))
 
-## add human readable activity names from activity labels data set
-activity$ActivityName <- activityLabel$Name[activity$ActivityID]
+## add human readable activity names from activity labels data set by
+## replacing activity IDs with activity labels from activity_labes.txt file
+activity[[1]]   <- activityLabel$Name[activity[[1]]] 
+activity[[1]]   <- factor(activity[[1]], levels = activityLabel$Name)
+names(activity) <- c("Activity")
 
-## load and merge test and train data sets for features measurements extracting
-## only the measurements on the mean and standard deviation for each measurement
-## add columns for subjects and activities
-#featData <- do.call("rbind", lapply(featDataFiles, read.table, col.names = featureLabel$Name))
+## load and merge test and train data sets for features measurements
 featData <- do.call("rbind", lapply(featDataFiles, read.table, comment.char = ""))
 colnames(featData) <- featureLabel$Name
+
+## extract only the measurements on the mean and standard deviation for each measurement
 featData <- featData[,grep("std\\(\\)|mean\\(\\)", featureLabel$Name)]
+
+## add columns for subjects and activities
 featData <- cbind(activity, subject, featData)
-featData <- featData[order(featData$ActivityID, featData$SubjectID),]
 
 ## create tidy data set with the average of the feature measurements for each activity and each subject
-featDataLong <- melt(featData, id = names(featData[1:3]), measure.vars = names(featData[-(1:3)]))
-featDataTidy <- dcast(featDataLong, ActivityID + ActivityName + SubjectID ~ variable, mean)
+featDataLong <- melt(featData, id = names(featData[1:2]), measure.vars = names(featData[-(1:2)]))
+featDataTidy <- dcast(featDataLong, Activity + SubjectID ~ variable, mean)
 
 ## write resulting data set into a file
 write.table(featDataTidy, file = "feature_averages.txt", row.names = FALSE, col.names = TRUE)
