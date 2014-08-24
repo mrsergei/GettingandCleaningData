@@ -75,7 +75,7 @@ First, You have to sure `R` is instaled on yoru system. Copy the `run_analysis.R
 [1] "UCI HAR Dataset"        "run_analysis.R" 
 > source("run_analysis.R")
 ```
-Scrpit will create file `feature_averages.txt` containing tidy data set   
+Scrpit will create file `feature_averages.txt` containing the tidy data set   
 
 ```
 > dir()
@@ -84,6 +84,5 @@ Scrpit will create file `feature_averages.txt` containing tidy data set
  [1] "activity"         "activityFiles"    "activityLabel"    "activityNameFile" "dataDir"         
  [6] "featData"         "featDataFiles"    "featDataLong"     "featDataTidy"     "featNameFile"    
 [11] "featureLabel"     "fileUrl"          "subject"          "subjectFiles"    
-> 
 
 ```
