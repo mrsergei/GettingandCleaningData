@@ -31,7 +31,7 @@ This README file describes what `run_analysis.R` script does and how to run it t
 5      STANDING         2         0.2748330       -0.02784779       -0.12952716
 6      STANDING         2         0.2792199       -0.01862040       -0.11390197
 ```
-- Using `reshape2` library function melt, it generates long data format with activity, subject, variable and value:   
+- Using `reshape2` library function `melt`, it generates long data format with activity, subject, variable and value:   
 ```   
 > head(featDataLong)
   ActivityLabel SubjectID          variable     value
@@ -42,7 +42,7 @@ This README file describes what `run_analysis.R` script does and how to run it t
 5      STANDING         2 tBodyAcc-mean()-X 0.2748330
 6      STANDING         2 tBodyAcc-mean()-X 0.2792199
 ```  
-- Using `reshape2` library function dcast it calculates mean of each variable per subject per activity and generates long data format for the averages: 
+- Using `reshape2` library function `dcast` it calculates mean of each variable per subject per activity and generates long data format for the averages: 
 ```  
 > head(featDataTidy[1:5])
   ActivityLabel SubjectID tBodyAcc-mean()-X tBodyAcc-mean()-Y tBodyAcc-mean()-Z
