@@ -52,7 +52,7 @@ mad(): Median absolute deviation
 max(): Largest value in array  
 min(): Smallest value in array  
 sma(): Signal magnitude area  
-energy(): Energy measure. Sum of the squares divided by the number of values. 
+energy(): Energy measure. Sum of the squares divided by the number of values.  
 iqr(): Interquartile range   
 entropy(): Signal entropy  
 arCoeff(): Autorregresion coefficients with Burg order equal to 4  
