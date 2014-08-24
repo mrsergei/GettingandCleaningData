@@ -7,9 +7,11 @@
 if(!require(reshape2)) {install.packages("reshape2"); require(reshape2)}
 
 ## downlaod and unpack the raw data, if it has not been done yet
-fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-if(!file.exists("UCI_HAR_Dataset.zip")) download.file(fileUrl, destfile = "UCI_HAR_Dataset.zip", method = "curl")
-if(!file.exists("UCI HAR Dataset")) unzip("UCI_HAR_Dataset.zip")
+if(!file.exists("UCI HAR Dataset")) {
+    fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+    download.file(fileUrl, destfile = "UCI_HAR_Dataset.zip", method = "curl")
+    unzip("UCI_HAR_Dataset.zip")
+}
 
 ## indentify raw data files to load:
 dataDir          <- "UCI HAR Dataset"
