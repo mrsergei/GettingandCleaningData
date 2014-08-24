@@ -6,16 +6,16 @@
 ## ensure reshape2 is installed and loaded 
 if(!require(reshape2)) {install.packages("reshape2"); require(reshape2)}
 
-## downlaod and unpack the raw data, if it has not been done
+## downlaod and unpack the raw data, if it has not been done yet
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 if(!file.exists("UCI_HAR_Dataset.zip")) download.file(fileUrl, destfile = "UCI_HAR_Dataset.zip", method = "curl")
 if(!file.exists("UCI HAR Dataset")) unzip("UCI_HAR_Dataset.zip")
 
-## indentify raw data files to load and process
+## indentify raw data files to load:
 dataDir          <- "UCI HAR Dataset"
-featDataFiles    <- list.files(dataDir, pattern = "^X_", full.names = TRUE, recursive = TRUE)
-activityFiles    <- list.files(dataDir, pattern = "^y_", full.names = TRUE, recursive = TRUE)
-subjectFiles     <- list.files(dataDir, pattern = "^subject_", full.names = TRUE, recursive = TRUE)
+featDataFiles    <- paste(dataDir, c("test/X_test.txt", "train/X_train.txt"), sep = "/")
+activityFiles    <- paste(dataDir, c("test/y_test.txt", "train/y_train.txt"), sep = "/")
+subjectFiles     <- paste(dataDir, c("test/subject_test.txt", "train/subject_train.txt"), sep = "/")
 featNameFile     <- paste(dataDir, "features.txt", sep = "/")
 activityNameFile <- paste(dataDir, "activity_labels.txt", sep = "/")
 
@@ -33,7 +33,7 @@ activity <- do.call("rbind", lapply(activityFiles, read.table))
 ## replacing activity IDs with activity labels from activity_labes.txt file
 activity[[1]]   <- activityLabel$Name[activity[[1]]] 
 activity[[1]]   <- factor(activity[[1]], levels = activityLabel$Name)
-names(activity) <- c("Activity")
+names(activity) <- c("ActivityLabel")
 
 ## load and merge test and train data sets for features measurements
 featData <- do.call("rbind", lapply(featDataFiles, read.table, comment.char = ""))
@@ -47,8 +47,7 @@ featData <- cbind(activity, subject, featData)
 
 ## create tidy data set with the average of the feature measurements for each activity and each subject
 featDataLong <- melt(featData, id = names(featData[1:2]), measure.vars = names(featData[-(1:2)]))
-featDataTidy <- dcast(featDataLong, Activity + SubjectID ~ variable, mean)
+featDataTidy <- dcast(featDataLong, ActivityLabel + SubjectID ~ variable, mean)
 
-## write resulting data set into a file
+## write resulting data set into a file keeping the human readable column names
 write.table(featDataTidy, file = "feature_averages.txt", row.names = FALSE, col.names = TRUE)
-
