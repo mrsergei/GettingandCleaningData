@@ -109,7 +109,9 @@ The following files are available for the train and test data. Their description
 - 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
 
 - 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
- 
+
+Data set containing the files listed above cn be found at: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
 ####Tidy dataset  
 
 In additon to the original data set teh follewing file is included:
@@ -124,6 +126,8 @@ In additon to the original data set teh follewing file is included:
    - 'train/X_test.txt'   
    - 'train/y_test.txt'  
    - 'train/subject_test.txt'  
+   
+[run_analysis.R](https://github.com/mrsergei/GettingandCleaningData/blob/master/run_analysis.R) has been used to generate 'feature_averages.txt'. [Readme](https://github.com/mrsergei/GettingandCleaningData/blob/master/README.md) containes detailed description of that that script does. Both can be conveniently found here: https://github.com/mrsergei/GettingandCleaningData
 
 ####Notes: 
 
