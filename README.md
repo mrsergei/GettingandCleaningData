@@ -41,7 +41,6 @@ This README file describes what `run_analysis.R` script does and how to run it t
 4      STANDING         2 tBodyAcc-mean()-X 0.2702982
 5      STANDING         2 tBodyAcc-mean()-X 0.2748330
 6      STANDING         2 tBodyAcc-mean()-X 0.2792199
-
 ```  
 - Using `reshape2` library function dcast it calculates mean of each variable per subject per activity and generates long data format for the averages: 
 ```  
@@ -53,7 +52,6 @@ This README file describes what `run_analysis.R` script does and how to run it t
 4       WALKING         4         0.2785820       -0.01483995        -0.1114031
 5       WALKING         5         0.2778423       -0.01728503        -0.1077418
 6       WALKING         6         0.2836589       -0.01689542        -0.1103032
-
 ```  
 - `featDatsaTidy` gets written to the `feature_average.txt` file
 
@@ -84,5 +82,4 @@ Scrpit will create file `feature_averages.txt` containing the tidy data set
  [1] "activity"         "activityFiles"    "activityLabel"    "activityNameFile" "dataDir"         
  [6] "featData"         "featDataFiles"    "featDataLong"     "featDataTidy"     "featNameFile"    
 [11] "featureLabel"     "fileUrl"          "subject"          "subjectFiles"    
-
 ```
