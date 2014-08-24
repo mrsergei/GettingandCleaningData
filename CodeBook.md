@@ -154,7 +154,7 @@ File contains 68 columns and 181 rows. First two columns contain lists of 6 acti
 [61] "fBodyBodyAccJerkMag-mean()"  "fBodyBodyAccJerkMag-std()"   "fBodyBodyGyroMag-mean()"   
 [64] "fBodyBodyGyroMag-std()"      "fBodyBodyGyroJerkMag-mean()" "fBodyBodyGyroJerkMag-std()" 
 ```
-[run_analysis.R](https://github.com/mrsergei/GettingandCleaningData/blob/master/run_analysis.R) script has been used to generate 'feature_averages.txt'. [Readme](https://github.com/mrsergei/GettingandCleaningData/blob/master/README.md) contains detailed description of that that script does. Both can be conveniently found here: https://github.com/mrsergei/GettingandCleaningData
+[run_analysis.R](https://github.com/mrsergei/GettingandCleaningData/blob/master/run_analysis.R) script has been used to generate 'feature_averages.txt'. [Readme](https://github.com/mrsergei/GettingandCleaningData/blob/master/README.md) contains detailed description of that that script does and how to run it. Both *Readme* file and the *run_analysis.R* script can be conveniently found here: https://github.com/mrsergei/GettingandCleaningData
 
 ####Notes: 
 
