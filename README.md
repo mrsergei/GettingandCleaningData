@@ -74,6 +74,10 @@ First, You have to sure `R` is instaled on yoru system. Copy the `run_analysis.R
 > dir()  
 [1] "UCI HAR Dataset"        "run_analysis.R" 
 > source("run_analysis.R")
+```
+Scrpit will create file `feature_averages.txt` containing tidy data set   
+
+```
 > dir()
 [1] "feature_averages.txt" "UCI HAR Dataset"        "run_analysis.R" 
 > ls()
@@ -83,4 +87,3 @@ First, You have to sure `R` is instaled on yoru system. Copy the `run_analysis.R
 > 
 
 ```
-Scrpit will create file `feature_averages.txt` containing tidy data set
