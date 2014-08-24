@@ -129,7 +129,7 @@ In addition to the original data set the following file is included:
      
 File contains 68 columns and 181 rows. First two columns contain lists of 6 activity labels and 30 subjects identifies accordingly. Columns 3-68 represent 66 features that correspond to mean and standard deviation variables from the complete feature-vector. First row in the file contains the labels(header) for columns. Remaining rows are the average values of these variables per subject per activity label.  
 
-######Features selected for the further processing  
+######Features selected for calculating the averages  
  ```
  [1] "tBodyAcc-mean()-X"           "tBodyAcc-mean()-Y"           "tBodyAcc-mean()-Z"          
  [4] "tBodyAcc-std()-X"            "tBodyAcc-std()-Y"            "tBodyAcc-std()-Z"           
