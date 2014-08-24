@@ -114,23 +114,16 @@ The following files are available for the train and test data. Their description
 
 In additon to the original data set teh follewing file is included:
 
-- 'feature_averages.txt':  Subset of combined train and test sets containing average of each variable for each activity and each subject. Only 66 features out of the orgiginal 561-feature vector were selected for this data set that correspond to the mean and standard deviation variables. See 'features_averages.txt' for complete list of features included in this tidy data set. Variable values are in exactly the same units as the units for feature vercot variables in raw data set. Data from the followig files were used to create it:  
+**'feature_averages.txt'**:  Subset of combined train and test sets containing average of each variable for each activity and each subject. Only 66 features out of the orgiginal 561-feature vector were selected for this data set that correspond to the mean and standard deviation variables. See 'features_averages.txt' for complete list of features included in this tidy data set. Variable values are in exactly the same units as the units for feature vercot variables in raw data set. Data from the followig files were used to create it:  
 
-- 'features.txt'  
-
-- 'activity_labels.txt'  
-
-- 'train/X_train.txt'   
-
-- 'train/y_train.txt'  
-
-- 'train/subject_train.txt'  
-
-- 'train/X_test.txt'   
-
-- 'train/y_test.txt'  
-
-- 'train/subject_test.txt'  
+   - 'features.txt'  
+   - 'activity_labels.txt'  
+   - 'train/X_train.txt'   
+   - 'train/y_train.txt'  
+   - 'train/subject_train.txt'  
+   - 'train/X_test.txt'   
+   - 'train/y_test.txt'  
+   - 'train/subject_test.txt'  
 
 ####Notes: 
 
