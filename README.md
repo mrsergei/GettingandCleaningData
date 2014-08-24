@@ -57,7 +57,7 @@ This README file describes what `run_analysis.R` script does and how to run it t
 ```  
 - `featDatsaTidy` gets written to the `feature_average.txt` file
 
-- In addition, `run_analysis.R` genrate a number of `R` objects that you can use to do furtehr analysis:
+- In addition, `run_analysis.R` genrates a number of `R` objects that you can use to do furtehr analysis:
 
 ```
 > ls()
