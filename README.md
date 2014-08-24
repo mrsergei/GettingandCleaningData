@@ -1,6 +1,3 @@
-Wearable Computing Data Analysis
-================================
+#run_analysis.R
 
-Getting and Cleaning Data course project for Johns Hopkins University Data Science specialization on Coursera
-
-### My script does
+`run_analysis.R` scrpit is used to analize Human Activity Recognition Using Smartphones Data Set described here: https://github.com/mrsergei/GettingandCleaningData/blob/master/CodeBook.md
