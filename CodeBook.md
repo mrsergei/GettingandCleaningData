@@ -126,8 +126,10 @@ In addition to the original data set the following file is included:
    - 'train/X_test.txt'   
    - 'train/y_test.txt'  
    - 'train/subject_test.txt'  
-   
-[run_analysis.R](https://github.com/mrsergei/GettingandCleaningData/blob/master/run_analysis.R) has been used to generate 'feature_averages.txt'. [Readme](https://github.com/mrsergei/GettingandCleaningData/blob/master/README.md) contains detailed description of that that script does. Both can be conveniently found here: https://github.com/mrsergei/GettingandCleaningData
+     
+File contains 68 columns and 181 rows. First two columns contain lists of 6 activity labels and 30 subjects identifies accordingly. Columns 3-68 represent 66 features that correspond to mean and standard deviation variables from the complete feature-vector. First row in the file contains the labels(header) for columns. Remaining rows are the average values of these variables per subject per activity label.  
+
+[run_analysis.R](https://github.com/mrsergei/GettingandCleaningData/blob/master/run_analysis.R) script has been used to generate 'feature_averages.txt'. [Readme](https://github.com/mrsergei/GettingandCleaningData/blob/master/README.md) contains detailed description of that that script does. Both can be conveniently found here: https://github.com/mrsergei/GettingandCleaningData
 
 ####Notes: 
 
