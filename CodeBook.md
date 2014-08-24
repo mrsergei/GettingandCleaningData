@@ -10,7 +10,7 @@ activityrecognition@smartlab.ws
 www.smartlab.ws  
   
 -----
-### Experimental Study Desing  
+### Experimental Study Design  
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
@@ -114,9 +114,9 @@ Data set containing the files listed above can be found at: https://d396qusza40o
 
 ####Tidy dataset  
 
-In additon to the original data set teh follewing file is included:
+In addition to the original data set the following file is included:
 
-**'feature_averages.txt'**:  Subset of combined train and test sets containing average of each variable for each activity and each subject. Only 66 features out of the orgiginal 561-feature vector were selected for this data set that correspond to the mean and standard deviation variables. See 'features_averages.txt' for complete list of features included in this tidy data set. Variable values are in exactly the same units as the units for feature vercot variables in raw data set. Data from the followig files were used to create it:  
+**'feature_averages.txt'**:  Subset of combined train and test sets containing average of each variable for each activity and each subject. Only 66 features out of the original 561-feature vector were selected for this data set that correspond to the mean and standard deviation variables. See 'features_averages.txt' for complete list of features included in this tidy data set. Variable values are in exactly the same units as the units for feature vector variables in raw data set. Data from the following files were used to create it:  
 
    - 'features.txt'  
    - 'activity_labels.txt'  
@@ -127,7 +127,7 @@ In additon to the original data set teh follewing file is included:
    - 'train/y_test.txt'  
    - 'train/subject_test.txt'  
    
-[run_analysis.R](https://github.com/mrsergei/GettingandCleaningData/blob/master/run_analysis.R) has been used to generate 'feature_averages.txt'. [Readme](https://github.com/mrsergei/GettingandCleaningData/blob/master/README.md) containes detailed description of that that script does. Both can be conveniently found here: https://github.com/mrsergei/GettingandCleaningData
+[run_analysis.R](https://github.com/mrsergei/GettingandCleaningData/blob/master/run_analysis.R) has been used to generate 'feature_averages.txt'. [Readme](https://github.com/mrsergei/GettingandCleaningData/blob/master/README.md) contains detailed description of that that script does. Both can be conveniently found here: https://github.com/mrsergei/GettingandCleaningData
 
 ####Notes: 
 
