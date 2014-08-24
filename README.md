@@ -21,7 +21,9 @@ This README file describes what `run_analysis.R` script does and how to run it t
 - It adds human readable column names for activity vector(`activity`), subject vector (`subject`) and feature columns (`featData`)
 - It selects only feature data columns that correspond to mean and standard deviation variables
 - It combines activity, subject and reduced feature data set into one called `featData` for further processing:   
-```
+```   
+> dim(featData)  
+[1] 10299    68  
 > head(featData[1:5])
   ActivityLabel SubjectID tBodyAcc-mean()-X tBodyAcc-mean()-Y tBodyAcc-mean()-Z
 1      STANDING         2         0.2571778       -0.02328523       -0.01465376
@@ -33,6 +35,8 @@ This README file describes what `run_analysis.R` script does and how to run it t
 ```
 - Using `reshape2` library function `melt`, it generates long data format with activity, subject, variable and value:   
 ```   
+> dim(featDataLong)   
+[1] 679734      4   
 > head(featDataLong)
   ActivityLabel SubjectID          variable     value
 1      STANDING         2 tBodyAcc-mean()-X 0.2571778
@@ -44,6 +48,8 @@ This README file describes what `run_analysis.R` script does and how to run it t
 ```  
 - Using `reshape2` library function `dcast` it calculates mean of each variable per subject per activity and generates long data format for the averages: 
 ```  
+> dim(featDataTidy)
+[1] 180  68
 > head(featDataTidy[1:5])
   ActivityLabel SubjectID tBodyAcc-mean()-X tBodyAcc-mean()-Y tBodyAcc-mean()-Z
 1       WALKING         1         0.2773308       -0.01738382        -0.1111481
